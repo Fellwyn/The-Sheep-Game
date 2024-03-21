@@ -80,13 +80,13 @@ tiles: {
     1: () => [
     sprite('grass1'),
     area(),
-    scale(),
+    
     body({isStatic: true})
     ],
     2: () => [
         sprite('ground1'),
         area(),
-        body({isStatic: true})
+       body({isStatic: true})
     ],
     3: () => [
         sprite('edge_down'),
@@ -112,17 +112,17 @@ tiles: {
 
 }},
 )
-//bush layer
+//bush  layer
 addLevel([
     '6                ',
-    '       4  3 6    ',
-    '   4    111      ',
-    '        2 52     ',
-    '        1112     ',
-    '               3 ',
-    '3     6          ',
-    ' 34             ',
-    ' 6        6 4    ',
+    '9      4  3 6    ',
+    '9  4    111      ',
+    '9       2 52     ',
+    '9       1112     ',
+    '9              3 ',
+    '93    6          ',
+    '9 34            ',
+    '9 6       6 4    ',
     '   3             ',
     '                 ',
     '     4           ',
@@ -168,29 +168,33 @@ tiles: {
         scale(2),
         body({isStatic: true}),
         'tree'
-    ]
+    ],
+    9: () => [
+        rect(16, 48),
+        opacity(1),
+        area(),
+        //area({  ///HOWWW
+        //shape: new Rect(vec2(0), 16, 48), 
+        //offset: vec2(1, -4)}),
+
+        body({isStatic: true}), //is this is without isStatic/empty, they are more solid
+       
+       
+        'wall'
+    ],
 
 }},
-
-//
-
-
-
-
-
-
-
-
-
-
-//
-
 )
+
+
+
+
+
 
 
 const player = add([
     sprite("player"),
-    pos(50, 190),
+    pos(70, 190),
     area(),
     body({isStatic: true}),
     anchor('center'),
@@ -254,7 +258,7 @@ player.onCollide('hay', () => {
     shake(5)
 
     if(collectCounter === 5 ){
-
+        
     
         wait(.4, () => {
             go("win")
@@ -262,6 +266,14 @@ player.onCollide('hay', () => {
     }
 })
 
+player.onCollide('bush', () => {
+
+})
+
+
+player.onCollide('wall', () => {
+   
+})
 
 
 scene("win", () => {
