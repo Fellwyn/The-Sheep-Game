@@ -1,4 +1,4 @@
-# Sheep game 🐑 
+# The Sheep game 🐑 
 **[comment 10/2025:<br>
 This project was created during early phase of my JS journey and nowadays I use different approach to structures, styling and overall JS functionality]** <br><br>
 
