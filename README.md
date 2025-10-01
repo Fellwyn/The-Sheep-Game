@@ -22,8 +22,8 @@ Here is the link to the game:
 
 https://fellwyn.github.io/The-Sheep-Game/
 
---------
 
-Sprites: RGP Maker
-Sheep sound: Universifield (pixbay)
-Music: ISAo(Open game art) 
+
+Sprites: RGP Maker <br>
+Sheep sound: Universifield (pixbay) <br>
+Music: ISAo(Open game art)  <br>
